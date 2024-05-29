@@ -1,0 +1,290 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(244, 245, 234);
+  color: black;
+  font-family: "Fira Sans", sans-serif;
+  animation: moveup 850ms ease-in 1s forwards;
+  scroll-behavior: smooth;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #747373;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+@keyframes moveup {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+nav .heading {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5%;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero-text .btn {
+  padding: 10px 20px;
+  background-color: #747373;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hero-text .btn:hover {
+  background-color: #5a5a5a;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 60px 5%;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.about, .projects, .volunteer, .testimonials, .contact {
+  background-color: white;
+}
+
+
+.projects .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.projects .box {
+  margin: 10px 20px;
+  max-width: calc(33.333% - 40px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(10, 10, 10, 0.12);
+  background-color: #fff;
+}
+
+.projects .box .topic h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.projects .box p {
+  font-size: 1em;
+}
+
+
+.volunteer .content .btn {
+  padding: 10px 20px;
+  background-color: #747373;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.volunteer .content .btn:hover {
+  background-color: #5a5a5a;
+}
+
+
+.testimonials .testimonial-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.testimonials .testimonial {
+  margin: 10px 20px;
+  max-width: calc(33.333% - 40px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(10, 10, 10, 0.12);
+  background-color: #fff;
+}
+
+.testimonials .testimonial p {
+  font-size: 1em;
+  font-style: italic;
+}
+
+
+.contact .content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact .content .title {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.contactMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contactMenu .input1,
+.contactMenu .input3 {
+  width: calc(50% - 20px);
+  margin-bottom: 20px;
+}
+
+.contactMenu .input1 .label1,
+.contactMenu .input3 .title1 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contactMenu .input1 input,
+.contactMenu .input1 textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.contactMenu .input1 .button button {
+  padding: 10px 20px;
+  background-color: #747373;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contactMenu .input1 .button button:hover {
+  background-color: #5a5a5a;
+}
+
+
+footer {
+  background-color: #747373;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+}
+
+footer .footer span {
+  font-size: 1em;
+}
+
+footer .footer span a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+@media screen and (max-width: 1060px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-text,
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .projects .box,
+  .testimonials .testimonial {
+    max-width: calc(50% - 40px);
+  }
+
+  .contactMenu .input1,
+  .contactMenu .input3 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projects .box,
+  .testimonials .testimonial {
+    max-width: 100%;
+  }
+}
